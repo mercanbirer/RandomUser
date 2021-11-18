@@ -1,4 +1,5 @@
 package com.example.randomuser.api
 
-class UserApi {
+interface UserApi {
+    //https://randomuser.me/api/
 }
