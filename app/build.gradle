@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlinx-serialization'
 }
 
 android {
@@ -62,4 +66,24 @@ dependencies {
 
     //eventbus
     implementation "org.greenrobot:eventbus:3.2.0"
+
+    //hilt-dagger
+    implementation "com.google.dagger:hilt-android:2.35.1"
+    kapt "com.google.dagger:hilt-android-compiler:2.35.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
+
+
+    //room
+    implementation "androidx.room:room-runtime:2.3.0"
+    kapt "androidx.room:room-compiler:2.3.0"
+    implementation "androidx.room:room-ktx:2.3.0"
+
+
+    //retrofit-gson
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
 }
